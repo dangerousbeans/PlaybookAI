@@ -1,5 +1,5 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Manrope', sans-serif;
     margin: 0;
     padding: 0;
     background-color: #f8f9fa;
@@ -17,8 +17,10 @@ header {
 
 .logo {
     font-size: 24px;
-    font-weight: bold;
+    font-weight: 800;
     color: #007bff;
+    font-family: 'Sora', sans-serif;
+    letter-spacing: -0.5px;
 }
 
 nav ul {
@@ -56,6 +58,9 @@ nav a {
 .hero-text h1 {
     font-size: 36px;
     color: #007bff;
+    font-family: 'Sora', sans-serif;
+    font-weight: 700;
+    letter-spacing: -0.5px;
 }
 
 .hero-text p {
@@ -85,6 +90,9 @@ nav a {
 
 .card h2 {
     color: #007bff;
+    font-family: 'Sora', sans-serif;
+    font-weight: 600;
+    letter-spacing: -0.2px;
 }
 
 .card a {

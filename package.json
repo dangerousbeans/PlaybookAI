@@ -1,0 +1,17 @@
+{
+  "name": "playbookai",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build:css": "sass --style compressed custom-bootstrap.scss css/bootstrap-custom.css"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap": "^5.3.4",
+    "sass": "^1.86.2"
+  }
+}

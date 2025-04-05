@@ -5,6 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>PlaybookAI - Digital Sports Training</title>
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Sora:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <script type="importmap">
+    {
+      "imports": {
+        "three": "https://unpkg.com/three@0.162.0/build/three.module.js",
+        "three/examples/jsm/controls/OrbitControls.js": "https://unpkg.com/three@0.162.0/examples/jsm/controls/OrbitControls.js"
+      }
+    }
+  </script>
+  <script type="module" src="js/visualization.js"></script>
   <style>
     * {
       box-sizing: border-box;
@@ -170,6 +179,33 @@
     <div class="feature-box">
       <h3>Analytics Dashboard &rarr;</h3>
       <p>Track which content resonates most with users and identify gaps in your training materials to improve your content strategy.</p>
+    </div>
+  </section>
+
+  <section style="background: #ffffff; padding: 40px; border-bottom: 1px solid #eee;">
+    <h2 style="text-align: center; margin-bottom: 30px; color: #0057ff; font-family: 'Sora', sans-serif; font-weight: 600;">Live Rugbysite Demo</h2>
+    <div style="max-width: 1000px; margin: 0 auto;">
+      <iframe
+        src="https://starlightgarden.space/chat/share?shared_id=f59e6af6037e11f09528a68cabdada97&from=chat&auth=JiYTM0ODEyMDM3ZDExZjA4MzYzYTY4Y2"
+        style="width: 100%; height: 100%; min-height: 600px"
+        frameborder="0"
+      >
+      </iframe>
+    </div>
+  </section>
+
+  <section style="background: #ffffff; padding: 40px; border-bottom: 1px solid #eee;">
+    <h2 style="text-align: center; margin-bottom: 30px; color: #0057ff; font-family: 'Sora', sans-serif; font-weight: 600;">How Our Technology Works</h2>
+    <p style="text-align: center; max-width: 800px; margin: 0 auto 30px; color: #444;">
+      PlaybookAI combines all your content blocks into a unified knowledge base, making it easier for users to find exactly what they need when they need it.
+    </p>
+    <div id="visualization-container" style="width: 100%; height: 500px; position: relative;">
+      <!-- Three.js visualization will be rendered here -->
+    </div>
+    <div style="text-align: center; margin-top: 20px;">
+      <button id="combine-button" style="background: #0057ff; color: white; border: none; padding: 12px 24px; border-radius: 6px; font-family: 'Manrope', sans-serif; font-weight: 600; cursor: pointer; font-size: 1rem;">
+        Combine Content Blocks
+      </button>
     </div>
   </section>
 

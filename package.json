@@ -15,7 +15,8 @@
   "license": "ISC",
   "dependencies": {
     "bootstrap": "^5.3.4",
-    "sass": "^1.86.2"
+    "sass": "^1.86.2",
+    "three": "^0.175.0"
   },
   "devDependencies": {
     "gh-pages": "^6.3.0"

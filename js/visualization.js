@@ -28,15 +28,20 @@ function init() {
   scene = new THREE.Scene();
   scene.background = new THREE.Color(0xf5f7fa);
 
+  // Get container dimensions
+  const container = document.getElementById('visualization-container');
+  const containerWidth = container.clientWidth;
+  const containerHeight = container.clientHeight || 400; // Fallback height if not specified
+  
   // Create the camera
-  camera = new THREE.PerspectiveCamera(60, window.innerWidth / window.innerHeight, 0.1, 1000);
+  camera = new THREE.PerspectiveCamera(60, containerWidth / containerHeight, 0.1, 1000);
   camera.position.set(0, 5, 15);
   
   // Create the renderer
   renderer = new THREE.WebGLRenderer({ antialias: true });
-  renderer.setSize(window.innerWidth, window.innerHeight);
+  renderer.setSize(containerWidth, containerHeight);
   renderer.setPixelRatio(window.devicePixelRatio);
-  document.getElementById('visualization-container').appendChild(renderer.domElement);
+  container.appendChild(renderer.domElement);
   
   // Add orbit controls
   controls = new OrbitControls(camera, renderer.domElement);
@@ -317,9 +322,13 @@ function resetVisualization() {
 
 // Handle window resize
 function onWindowResize() {
-  camera.aspect = window.innerWidth / window.innerHeight;
+  const container = document.getElementById('visualization-container');
+  const containerWidth = container.clientWidth;
+  const containerHeight = container.clientHeight || 400; // Fallback height if not specified
+  
+  camera.aspect = containerWidth / containerHeight;
   camera.updateProjectionMatrix();
-  renderer.setSize(window.innerWidth, window.innerHeight);
+  renderer.setSize(containerWidth, containerHeight);
 }
 
 // Animation loop

@@ -3,214 +3,106 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>PlaybookAI - Digital Sports Training</title>
-  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Sora:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <script type="importmap">
-    {
-      "imports": {
-        "three": "https://unpkg.com/three@0.162.0/build/three.module.js",
-        "three/examples/jsm/controls/OrbitControls.js": "https://unpkg.com/three@0.162.0/examples/jsm/controls/OrbitControls.js"
-      }
-    }
-  </script>
-  <script type="module" src="js/visualization.js"></script>
-  <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-    body {
-      font-family: 'Manrope', sans-serif;
-      background: #f5f7fa;
-      color: #111;
-    }
-    header {
-      background: #ffffff;
-      padding: 20px 40px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      border-bottom: 1px solid #eee;
-    }
-    nav a {
-      padding: 16px 24px;
-      text-decoration: none;
-      color: #333;
-      font-weight: 500;
-      border-left: 1px solid #eee;
-      font-family: 'Manrope', sans-serif;
-      letter-spacing: -0.2px;
-      transition: color 0.2s ease;
-    }
-    
-    nav a:hover {
-      color: #0057ff;
-    }
-    .hero {
-      background: #ffffff;
-      display: flex;
-      flex-wrap: wrap;
-      padding: 60px 40px;
-      align-items: center;
-      justify-content: space-between;
-      border-bottom: 1px solid #eee;
-    }
-    .hero-text {
-      flex: 1 1 400px;
-      padding-right: 20px;
-      border-right: 1px solid #eee;
-    }
-    .hero-image {
-      flex: 1 1 300px;
-      text-align: center;
-      padding-left: 20px;
-    }
-    .hero-text h1 {
-      font-size: 2.8rem;
-      color: #0057ff;
-      margin-bottom: 10px;
-      font-family: 'Sora', sans-serif;
-      letter-spacing: -0.5px;
-    }
-    .hero-text p {
-      font-size: 1.1rem;
-      margin-bottom: 20px;
-      color: #444;
-    }
-    .hero-text a {
-      display: inline-block;
-      background: #0057ff;
-      color: #fff;
-      padding: 12px 24px;
-      text-decoration: none;
-      border-radius: 6px;
-    }
-    .hero-image img {
-      max-width: 100%;
-      height: auto;
-    }
-    .features {
-      background: #ffffff;
-      padding: 40px;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0;
-      border-bottom: 1px solid #eee;
-    }
-    .feature-box {
-      flex: 1 1 300px;
-      background: #ffffff;
-      padding: 20px;
-      border-left: 1px solid #eee;
-    }
-    .feature-box:first-child {
-      border-left: none;
-    }
-    .feature-box h3 {
-      margin-bottom: 10px;
-      color: #0057ff;
-      font-family: 'Sora', sans-serif;
-      font-weight: 600;
-    }
-    .footer {
-      background: #ffffff;
-      padding: 30px 40px;
-      text-align: center;
-      font-size: 0.9rem;
-      color: #777;
-      border-top: 1px solid #eee;
-    }
-    @media (max-width: 768px) {
-      .hero {
-        flex-direction: column;
-      }
-      .hero-text {
-        border-right: none;
-        padding-right: 0;
-        border-bottom: 1px solid #eee;
-        margin-bottom: 20px;
-      }
-      .hero-image {
-        padding-left: 0;
-      }
-      .feature-box {
-        border-left: none;
-        border-top: 1px solid #eee;
-      }
-      .feature-box:first-child {
-        border-top: none;
-      }
-    }
-  </style>
+  <title>PlaybookAI – Instant coaching assistant</title>
+  <!-- Tailwind via CDN for rapid prototyping -->
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-  <header>
-    <div style="font-family: 'Sora', sans-serif; font-weight: 800; font-size: 1.25rem; letter-spacing: -0.5px;"><strong>PlaybookAI</strong></div>
-    <nav>
-      <a href="#" style="border-left: none;">Solutions</a>
-      <a href="#">Projects</a>
-      <a href="#">Services</a>
-      <a href="#">Resources</a>
-      <a href="#">About</a>
-    </nav>
+<body class="bg-gray-50 text-gray-800">
+  <!-- Hero -->
+  <header class="relative overflow-hidden bg-gradient-to-br from-indigo-600 via-purple-600 to-pink-600 text-white">
+    <div class="mx-auto max-w-6xl px-6 py-24 lg:flex lg:items-center lg:gap-8">
+      <div class="lg:w-1/2">
+        <h1 class="text-4xl font-extrabold sm:text-5xl">Coach smarter in seconds</h1>
+        <p class="mt-4 text-lg">PlaybookAI turns your sports video library into a 24/7 coaching assistant that finds drills, answers questions, and personalizes training – instantly.</p>
+        <a href="#" class="mt-8 inline-block rounded-xl bg-white px-6 py-3 font-semibold text-indigo-600 shadow-md hover:bg-gray-100">Request early access</a>
+      </div>
+      <div class="mt-12 lg:mt-0 lg:w-1/2">
+        <div class="aspect-video rounded-2xl bg-white/10 backdrop-blur-lg ring-1 ring-white/20 shadow-2xl overflow-hidden">
+          <img src="demo.gif" alt="Product Demo" class="w-full h-full object-contain">
+        </div>
+      </div>
+    </div>
   </header>
 
-  <section class="hero">
-    <div class="hero-text">
-      <h1>Make Your Sports Training Content Discoverable</h1>
-      <p>B2B platform that helps organizations connect users with the right training videos and guides when they need them. Transform how users discover your valuable content.</p>
-      <a href="#" style="font-weight: 700; text-decoration: none; font-size: 1.05rem;">Try PlaybookAI &rarr;</a>
-    </div>
-    <div class="hero-image">
-      <div id="visualization-container" style="width: 100%; height: 400px; position: relative; overflow: hidden;">
-        <!-- Three.js visualization will be rendered here -->
+  <!-- Problem / Benefits -->
+  <section class="mx-auto max-w-6xl px-6 py-20">
+    <h2 class="text-center text-3xl font-bold">Why PlaybookAI?</h2>
+    <p class="mx-auto mt-4 max-w-3xl text-center text-lg text-gray-600">Stop scrubbing through hours of video and PDFs. Ask a question – get the clip, drill, or answer in seconds.</p>
+
+    <div class="mt-16 grid gap-10 sm:grid-cols-2 lg:grid-cols-3">
+      <!-- Feature card -->
+      <div class="flex flex-col items-start rounded-2xl bg-white p-6 shadow">
+        <svg class="h-10 w-10 text-indigo-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        <h3 class="mt-4 text-xl font-semibold">Instant search</h3>
+        <p class="mt-2 text-gray-600">Query your entire drill library with natural language and jump straight to the right clip.</p>
       </div>
-      <div style="text-align: center; margin-top: 20px;">
-        <button id="combine-button" style="background: #0057ff; color: white; border: none; padding: 12px 24px; border-radius: 6px; font-family: 'Manrope', sans-serif; font-weight: 600; cursor: pointer; font-size: 1rem;">
-          Combine Content Blocks
-        </button>
+      <div class="flex flex-col items-start rounded-2xl bg-white p-6 shadow">
+        <svg class="h-10 w-10 text-indigo-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M3 3h18v18H3z"/></svg>
+        <h3 class="mt-4 text-xl font-semibold">Contextual coaching</h3>
+        <p class="mt-2 text-gray-600">Get practice plans and drill suggestions tailored to your athletes’ needs.</p>
+      </div>
+      <div class="flex flex-col items-start rounded-2xl bg-white p-6 shadow">
+        <svg class="h-10 w-10 text-indigo-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 4h16v16H4z"/></svg>
+        <h3 class="mt-4 text-xl font-semibold">Secure & private</h3>
+        <p class="mt-2 text-gray-600">Your content stays yours — encrypted and isolated per organization.</p>
       </div>
     </div>
   </section>
 
-  <section class="features">
-    <div class="feature-box">
-      <h3>Content Indexing &rarr;</h3>
-      <p>Automatically organize and categorize your sports training videos and guides to make them instantly searchable for your users.</p>
-    </div>
-    <div class="feature-box">
-      <h3>AI-Powered Discovery &rarr;</h3>
-      <p>Our intelligent assistant helps your users find exactly the right training materials from your library, increasing content utilization.</p>
-    </div>
-    <div class="feature-box">
-      <h3>Analytics Dashboard &rarr;</h3>
-      <p>Track which content resonates most with users and identify gaps in your training materials to improve your content strategy.</p>
-    </div>
-  </section>
-
-  <section style="background: #ffffff; padding: 40px; border-bottom: 1px solid #eee;">
-    <h2 style="text-align: center; margin-bottom: 30px; color: #0057ff; font-family: 'Sora', sans-serif; font-weight: 600;">Live Rugbysite Demo</h2>
-    <div style="max-width: 1000px; margin: 0 auto;">
-      <iframe
-        src="https://starlightgarden.space/chat/share?shared_id=f59e6af6037e11f09528a68cabdada97&from=chat&auth=JiYTM0ODEyMDM3ZDExZjA4MzYzYTY4Y2"
-        style="width: 100%; height: 100%; min-height: 600px"
-        frameborder="0"
-      >
-      </iframe>
+  <!-- Demo section -->
+  <section class="bg-indigo-50">
+    <div class="mx-auto max-w-6xl px-6 py-20 grid gap-12 lg:grid-cols-2 lg:items-center">
+      <div>
+        <h2 class="text-3xl font-bold text-indigo-700">See it in action</h2>
+        <p class="mt-4 text-gray-700">Watch how a coach asks, “Show me a 3‑minute warm‑up for U13 players” and gets an instant drill playlist.</p>
+      </div>
+      <div class="rounded-2xl bg-white shadow p-4">
+        <video class="w-full" controls style="max-width: 100%; height: auto;">
+          <source src="demo.webm" type="video/webm">
+          Your browser does not support the video tag.
+        </video>
+      </div>
     </div>
   </section>
 
-  <section style="background: #ffffff; padding: 40px; border-bottom: 1px solid #eee;">
-    <h2 style="text-align: center; margin-bottom: 30px; color: #0057ff; font-family: 'Sora', sans-serif; font-weight: 600;">How Our Technology Works</h2>
-    <p style="text-align: center; max-width: 800px; margin: 0 auto 30px; color: #444;">
-      PlaybookAI combines all your content blocks into a unified knowledge base, making it easier for users to find exactly what they need when they need it.
-    </p>
-    
+  <!-- Testimonials -->
+  <section class="mx-auto max-w-6xl px-6 py-20">
+    <h2 class="text-center text-3xl font-bold">What coaches say</h2>
+    <div class="mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+      <blockquote class="rounded-2xl bg-white p-6 shadow">
+        <p class="text-gray-700">“PlaybookAI cut my session prep from 2 hours to 15 minutes.”</p>
+        <cite class="mt-4 block font-semibold text-gray-900">Jamie, Head Coach U16</cite>
+      </blockquote>
+      <blockquote class="rounded-2xl bg-white p-6 shadow">
+        <p class="text-gray-700">“The AI understood our playbook better than my assistant.”</p>
+        <cite class="mt-4 block font-semibold text-gray-900">Alex, Academy Director</cite>
+      </blockquote>
+      <blockquote class="rounded-2xl bg-white p-6 shadow">
+        <p class="text-gray-700">“Parents love the personalized recap videos.”</p>
+        <cite class="mt-4 block font-semibold text-gray-900">Riley, Youth Coach</cite>
+      </blockquote>
+    </div>
   </section>
 
-  <footer class="footer">
-    &copy; 2025 PlaybookAI. All rights reserved.
+  <!-- CTA band -->
+  <section class="bg-gray-900 text-gray-100">
+    <div class="mx-auto max-w-6xl px-6 py-20 text-center">
+      <h2 class="text-3xl font-bold">Ready to coach smarter?</h2>
+      <p class="mt-4 text-lg">Join the private beta and be one of the first to shape PlaybookAI.</p>
+      <a href="#" class="mt-8 inline-block rounded-xl bg-indigo-500 px-8 py-4 font-semibold text-white shadow hover:bg-indigo-400">Request early access</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-100">
+    <div class="mx-auto max-w-6xl px-6 py-12 text-sm text-gray-600 flex flex-col sm:flex-row sm:justify-between">
+      <p>&copy; 2025 PlaybookAI. All rights reserved.</p>
+      <div class="mt-4 sm:mt-0 flex gap-6">
+        <a href="#" class="hover:text-gray-900">Privacy</a>
+        <a href="#" class="hover:text-gray-900">Terms</a>
+        <a href="mailto:hello@playbookai.com" class="hover:text-gray-900">Contact</a>
+      </div>
+    </div>
   </footer>
 </body>
 </html>

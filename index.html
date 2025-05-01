@@ -1,135 +1,133 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI Coaching Assistant</title>
-    <!-- Modern Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <!-- FontAwesome Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="css/bootstrap-custom.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PlaybookAI – Instant coaching assistant</title>
+  <!-- Tailwind via CDN for rapid prototyping -->
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-    <header class="py-3">
-        <div class="container">
-            <div class="d-flex justify-content-between align-items-center">
-                <div class="logo"><span>AI Coach</span></div>
-                <nav>
-                    <ul class="nav">
-                        <li class="nav-item"><a class="nav-link" href="#"><i class="fas fa-bolt me-1"></i>Features</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#"><i class="fas fa-tag me-1"></i>Pricing</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#"><i class="fas fa-book me-1"></i>Resources</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#"><i class="fas fa-users me-1"></i>About Us</a></li>
-                        <li class="nav-item"><a class="btn btn-primary shadow-sm" href="#"><i class="fas fa-rocket me-1"></i>Get Started</a></li>
-                    </ul>
-                </nav>
-            </div>
+<body class="bg-gray-50 text-gray-800">
+  <!-- Hero -->
+  <header class="relative overflow-hidden bg-gradient-to-br from-indigo-600 via-purple-600 to-pink-600 text-white">
+    <!-- Brand bar -->
+    <div class="absolute inset-x-0 top-0">
+      <div class="mx-auto max-w-6xl px-6 py-5 flex items-center justify-between">
+        <a href="#" class="flex items-center gap-2 text-white font-extrabold text-xl">
+          <!-- Simple play icon inside circle -->
+          <svg class="h-8 w-8" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <circle cx="12" cy="12" r="10" />
+            <path d="M10 8l6 4-6 4z" />
+          </svg>
+          <span>PlaybookAI</span>
+        </a>
+      </div>
+    </div>
+    <div class="mx-auto max-w-6xl px-6 py-24 lg:flex lg:items-center lg:gap-8">
+      <div class="lg:w-1/2">
+        <h1 class="text-4xl font-extrabold sm:text-5xl">Coach smarter in seconds</h1>
+        <p class="mt-4 text-lg">Ask PlaybookAI any sporting or coaching question and instantly surface the most relevant videos, practice plans, or articles from your library</p>
+        <a href="#" class="mt-8 inline-block rounded-xl bg-white px-6 py-3 font-semibold text-indigo-600 shadow-md hover:bg-gray-100">Request early access</a>
+      </div>
+      <div class="mt-12 lg:mt-0 lg:w-1/2">
+        <div class="aspect-video rounded-2xl bg-white/10 backdrop-blur-lg ring-1 ring-white/20 shadow-2xl overflow-hidden">
+          <img src="demo.gif" alt="Product Demo" class="w-full h-full object-contain">
         </div>
-    </header>
+      </div>
+    </div>
+  </header>
 
-    <section class="hero py-5">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-md-6 hero-text">
-                    <h1>AI-assisted <span>Coaching</span> for Smarter Training</h1>
-                    <p class="lead">Enhance your training programs with AI-powered insights and personalized recommendations that adapt as your athletes grow.</p>
-                    <div class="d-flex gap-3">
-                        <a href="#" class="btn btn-primary btn-lg shadow"><i class="fas fa-play-circle me-2"></i>Start Free Trial</a>
-                        <a href="#" class="btn btn-light btn-lg"><i class="fas fa-info-circle me-2"></i>Learn More</a>
-                    </div>
-                </div>
-                <div class="col-md-6 text-center hero-image">
-                    <div class="position-relative">
-                        <div class="position-absolute top-0 start-0 translate-middle-y bg-success p-4 rounded-circle shadow-lg text-white">
-                            <i class="fas fa-chart-line fa-2x"></i>
-                        </div>
-                        <div class="position-absolute top-50 end-0 translate-middle-y bg-info p-4 rounded-circle shadow-lg text-white">
-                            <i class="fas fa-brain fa-2x"></i>
-                        </div>
-                        <div class="bg-white p-5 rounded-lg shadow-lg d-inline-block position-relative" style="z-index: 2">
-                            <div class="bg-primary text-white p-5 rounded-circle d-inline-block">
-                                <h2 class="display-4 fw-bold mb-0">AI</h2>
-                                <p class="fw-bold mb-0">Coach</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+  <!-- Problem / Benefits -->
+  <section class="mx-auto max-w-6xl px-6 py-20">
+    <h2 class="text-center text-3xl font-bold text-gray-900">Why PlaybookAI?</h2>
+    <p class="mx-auto mt-4 max-w-3xl text-center text-lg text-gray-600">Stop scrubbing through hours of video and PDFs. Ask a question – get the clip, drill, or answer in seconds.</p>
 
-    <section class="info py-5">
-        <div class="container position-relative" style="z-index: 1">
-            <div class="text-center mb-5">
-                <h2 class="display-5 fw-bold">Why Choose <span style="color: #5460fe">AI Coach</span></h2>
-                <p class="lead text-secondary">Discover how our platform can transform your training approach</p>
-            </div>
-            <div class="row">
-                <div class="col-md-4 mb-4">
-                    <div class="card h-100 text-center p-4">
-                        <div class="card-body">
-                            <div class="icon-wrapper mb-4">
-                                <i class="fas fa-calendar-alt fa-3x text-info"></i>
-                            </div>
-                            <h2 class="card-title">Upcoming Events</h2>
-                            <p class="card-text">Join our AI training insights session on <strong>July 31</strong> and learn about the latest advancements.</p>
-                            <a href="#" class="btn btn-link">Register Now</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 mb-4">
-                    <div class="card h-100 text-center p-4">
-                        <div class="card-body">
-                            <div class="icon-wrapper mb-4">
-                                <i class="fas fa-lightbulb fa-3x text-warning"></i>
-                            </div>
-                            <h2 class="card-title">AI-powered Insights</h2>
-                            <p class="card-text">See how AI transforms coaching methodologies and provides real-time feedback to athletes.</p>
-                            <a href="#" class="btn btn-link">Learn More</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 mb-4">
-                    <div class="card h-100 text-center p-4">
-                        <div class="card-body">
-                            <div class="icon-wrapper mb-4">
-                                <i class="fas fa-industry fa-3x text-success"></i>
-                            </div>
-                            <h2 class="card-title">Industry Applications</h2>
-                            <p class="card-text">How AI-driven feedback improves performance across different sports and training regimens.</p>
-                            <a href="#" class="btn btn-link">Discover Use Cases</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+    <div class="mt-16 grid gap-10 sm:grid-cols-2 lg:grid-cols-3">
+      <!-- Feature card: Instant search -->
+      <div class="flex flex-col items-start rounded-2xl bg-white p-6 shadow">
+        <svg class="h-10 w-10 text-indigo-600" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+          <circle cx="11" cy="11" r="7" />
+          <line x1="21" y1="21" x2="16.65" y2="16.65" />
+        </svg>
+        <h3 class="mt-4 text-xl font-semibold">Instant search</h3>
+        <p class="mt-2 text-gray-600">Query your entire drill library with natural language and jump straight to the right clip.</p>
+      </div>
 
-    <footer class="text-white py-4">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-md-6 text-center text-md-start">
-                    <div class="logo mb-3"><span>AI Coach</span></div>
-                    <p class="mb-0 text-white-50">Transforming training through artificial intelligence</p>
-                </div>
-                <div class="col-md-6 text-center text-md-end mt-3 mt-md-0">
-                    <div class="social-icons mb-3">
-                        <a href="#" class="text-white mx-2"><i class="fab fa-twitter fa-lg"></i></a>
-                        <a href="#" class="text-white mx-2"><i class="fab fa-facebook fa-lg"></i></a>
-                        <a href="#" class="text-white mx-2"><i class="fab fa-instagram fa-lg"></i></a>
-                        <a href="#" class="text-white mx-2"><i class="fab fa-linkedin fa-lg"></i></a>
-                    </div>
-                    <p class="mb-0">&copy; 2025 AI Coach. All Rights Reserved.</p>
-                </div>
-            </div>
-        </div>
-    </footer>
-    
-    <!-- Bootstrap Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+      <!-- Feature card: Contextual coaching -->
+      <div class="flex flex-col items-start rounded-2xl bg-white p-6 shadow">
+        <svg class="h-10 w-10 text-indigo-600" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+          <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
+        </svg>
+        <h3 class="mt-4 text-xl font-semibold">Contextual coaching</h3>
+        <p class="mt-2 text-gray-600">Get practice plans and drill suggestions tailored to your athletes’ needs.</p>
+      </div>
+
+      <!-- Feature card: Secure & private -->
+      <div class="flex flex-col items-start rounded-2xl bg-white p-6 shadow">
+        <svg class="h-10 w-10 text-indigo-600" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+          <rect x="3" y="11" width="18" height="11" rx="2" ry="2" />
+          <path d="M7 11V7a5 5 0 0 1 10 0v4" />
+        </svg>
+        <h3 class="mt-4 text-xl font-semibold">Secure & private</h3>
+        <p class="mt-2 text-gray-600">Your content stays yours — encrypted and isolated per organization.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Demo section -->
+  <section class="bg-indigo-50">
+    <div class="mx-auto max-w-6xl px-6 py-20 grid gap-12 lg:grid-cols-2 lg:items-center">
+      <div>
+        <h2 class="text-3xl font-bold text-indigo-700">See it in action</h2>
+        <p class="mt-4 text-gray-700">Watch how a coach asks, “Show me a 3‑minute warm‑up for U13 players” and gets an instant drill playlist.</p>
+      </div>
+      <div class="rounded-2xl bg-white shadow p-4">
+        <video class="w-full" controls style="max-width: 100%; height: auto;">
+          <source src="demo.webm" type="video/webm">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="mx-auto max-w-6xl px-6 py-20">
+    <h2 class="text-center text-3xl font-bold">What coaches say</h2>
+    <div class="mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+      <blockquote class="rounded-2xl bg-white p-6 shadow">
+        <p class="text-gray-700">“PlaybookAI cut my session prep from 2 hours to 15 minutes.”</p>
+        <cite class="mt-4 block font-semibold text-gray-900">Jamie, Head Coach U16</cite>
+      </blockquote>
+      <blockquote class="rounded-2xl bg-white p-6 shadow">
+        <p class="text-gray-700">“The AI understood our playbook better than my assistant.”</p>
+        <cite class="mt-4 block font-semibold text-gray-900">Alex, Academy Director</cite>
+      </blockquote>
+      <blockquote class="rounded-2xl bg-white p-6 shadow">
+        <p class="text-gray-700">“Parents love the personalized recap videos.”</p>
+        <cite class="mt-4 block font-semibold text-gray-900">Riley, Youth Coach</cite>
+      </blockquote>
+    </div>
+  </section>
+
+  <!-- CTA band -->
+  <section class="bg-gray-900 text-gray-100">
+    <div class="mx-auto max-w-6xl px-6 py-20 text-center">
+      <h2 class="text-3xl font-bold">Ready to coach smarter?</h2>
+      <p class="mt-4 text-lg">Join the private beta and be one of the first to shape PlaybookAI.</p>
+      <a href="#" class="mt-8 inline-block rounded-xl bg-indigo-500 px-8 py-4 font-semibold text-white shadow hover:bg-indigo-400">Request early access</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-100">
+    <div class="mx-auto max-w-6xl px-6 py-12 text-sm text-gray-600 flex flex-col sm:flex-row sm:justify-between">
+      <p>&copy; 2025 PlaybookAI. All rights reserved.</p>
+      <div class="mt-4 sm:mt-0 flex gap-6">
+        <a href="#" class="hover:text-gray-900">Privacy</a>
+        <a href="#" class="hover:text-gray-900">Terms</a>
+        <a href="mailto:hello@playbookai.com" class="hover:text-gray-900">Contact</a>
+      </div>
+    </div>
+  </footer>
 </body>
 </html>

@@ -7,7 +7,6 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build:css": "sass --style compressed custom-bootstrap.scss css/bootstrap-custom.css",
     "watch:css": "sass --watch custom-bootstrap.scss:css/bootstrap-custom.css",
-    "predeploy": "npm run build:css",
     "deploy": "gh-pages -d .",
     "start": "node server.js"
   },
